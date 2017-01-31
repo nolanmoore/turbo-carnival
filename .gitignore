@@ -1,7 +1,15 @@
 logs/*
 !.gitkeep
-node_modules/
 bower_components/
 tmp
-.DS_Store
+
+# Node build artifacts
+node_modules/
+npm-debug.log
+
+# Local development
+*.env
+*.dev
+*.old
 .idea
+.DS_Store

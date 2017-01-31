@@ -2,17 +2,13 @@
 
 angular.module('TurboApp', [
   'ui.router',
-  'ngRoute',
   'TurboApp.view1',
   'TurboApp.view2',
-  // 'TurboApp.version',
   'TurboApp.leaflet'
 ])
-  .config(['$locationProvider', '$routeProvider', '$stateProvider',
-    function($locationProvider, $routeProvider, $stateProvider) {
+  .config(['$locationProvider', '$stateProvider',
+    function($locationProvider, $stateProvider) {
       $locationProvider.hashPrefix('!');
-
-      // $routeProvider.otherwise({redirectTo: '/view1'});
 
       $stateProvider
         .state("view1", {
