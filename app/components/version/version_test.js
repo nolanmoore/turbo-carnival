@@ -1,7 +1,7 @@
 'use strict';
 
-describe('myApp.version module', function() {
-  beforeEach(module('myApp.version'));
+describe('TurboApp.version module', function() {
+  beforeEach(module('TurboApp.version'));
 
   describe('version service', function() {
     it('should return current version', inject(function(version) {
