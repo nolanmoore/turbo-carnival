@@ -10,15 +10,15 @@ angular.module('TurboApp.leaflet')
     vm.getLatLon = function() {
       var loc = $resource('https://maps.googleapis.com/maps/api/geocode/json?address=:zip&key=:key', {
         zip: '@zip',
-        key: 'AIzaSyARAwqpnzeC0_6wsrEJR3B3WwKu-OKHV8Y'
+        key: process.env.GOOGLEMAPS_KEY
       });
       loc.get({zip: vm.zipcode}).$promise.then(
         function(data) {
           vm.location = data.results[0].geometry.location;
         }, function (error) {
-          alert("unable to convert zip to LatLng")
+          alert("unable to convert zip to LatLng");
         }
-      )
+      );
     };
 
     vm.panMap = function() {

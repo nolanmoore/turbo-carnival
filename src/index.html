@@ -26,19 +26,22 @@
 
   <div ui-view></div>
 
+  <!-- bower:js -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <!-- <script src="bower_components/angular-animate/angular-animate.js"></script> -->
   <script src="bower_components/leaflet/dist/leaflet.js"></script>
+  <!-- endbower -->
+
   <script src="app.js"></script>
-  <script src="view1/view1.module.js"></script>
-  <script src="view1/view1.controller.js"></script>
-  <script src="view2/view2.module.js"></script>
-  <script src="view2/view2.controller.js"></script>
-  <script src="leaflet/leaflet.module.js"></script>
-  <script src="leaflet/leaflet.controller.js"></script>
+  <script src="components/view1/view1.module.js"></script>
+  <script src="components/view1/view1.controller.js"></script>
+  <script src="components/view2/view2.module.js"></script>
+  <script src="components/view2/view2.controller.js"></script>
+  <script src="components/leaflet/leaflet.module.js"></script>
+  <script src="components/leaflet/leaflet.controller.js"></script>
   <script src="components/brews/brews.module.js"></script>
   <script src="components/brews/brews.service.js"></script>
 </body>

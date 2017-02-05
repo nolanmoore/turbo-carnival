@@ -4,7 +4,7 @@ angular.module('Brews')
   .factory('Breweries', ['$resource', function($resource) {
     var brew = {};
     var baseUrl = 'http://api.brewerydb.com/v2/search/geo/point';
-    var key = '76f4b7282888f47fe6a82b3a8ea6ba13';
+    var key = process.env.BREWERYDB_KEY;
     // var _location = {};
     // var _finalUrl = '';
     var link = $resource('http://api.brewerydb.com/v2/search/geo/point?key=:key&lat=:lat&lng=:lng', {
@@ -20,12 +20,12 @@ angular.module('Brews')
         lng: location.lng
       }).$promise.then(
         function(brewdata) {
-          console.log('got the brewery data')
+          console.log('got the brewery data');
           breweries = brewdata.data;
         }, function(error) {
-          alert('could not retrieve list of nearby breweries')
+          alert('could not retrieve list of nearby breweries');
         });
-      return breweries
+      return breweries;
     };
 
     brew.getBeersFrom = function(brewey) {

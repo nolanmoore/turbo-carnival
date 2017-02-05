@@ -1,0 +1,1 @@
+const BREWERYDB_KEY = '76f4b7282888f47fe6a82b3a8ea6ba13'
